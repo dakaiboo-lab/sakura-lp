@@ -69,7 +69,7 @@ a {
 }
 
 .header-inner {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1180px, calc(100% - 64px));
   min-height: 72px;
   margin: 0 auto;
   display: flex;
@@ -121,15 +121,15 @@ a {
 }
 
 .hero {
-  min-height: calc(100svh - 72px);
+  min-height: min(820px, calc(92svh - 72px));
   display: flex;
   align-items: center;
-  padding: clamp(48px, 7vw, 92px) 0 clamp(56px, 8vw, 104px);
+  padding: clamp(38px, 5.5vw, 72px) 0 clamp(44px, 6vw, 80px);
 }
 
 .hero-inner,
 .container {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1180px, calc(100% - 64px));
   margin: 0 auto;
 }
 
@@ -191,16 +191,17 @@ h3 {
 }
 
 .cta-row {
-  margin-top: 2rem;
+  margin-top: 1.65rem;
 }
 
 .button {
-  min-height: 54px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.88rem 1.55rem;
+  padding: 0.74rem 1.34rem;
+  font-size: 0.94rem;
   font-weight: 700;
   line-height: 1.4;
   transition:
@@ -265,7 +266,7 @@ h3 {
 }
 
 .section-heading {
-  margin-bottom: clamp(1.6rem, 4vw, 2.8rem);
+  margin-bottom: clamp(1.55rem, 3.2vw, 2.35rem);
 }
 
 .section-heading.center {
@@ -276,11 +277,14 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.55rem;
+  min-height: 22px;
+  margin: 0 0 0.72rem;
   color: var(--accent);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-style: italic;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .section-mark::after {
@@ -288,6 +292,10 @@ h3 {
   width: 42px;
   height: 1px;
   background: var(--main);
+}
+
+.consultation-card > .section-mark {
+  margin-bottom: 0.72rem;
 }
 
 .worry-list {
@@ -605,7 +613,7 @@ blockquote::before {
   right: 16px;
   bottom: 14px;
   z-index: 30;
-  min-height: 54px;
+  min-height: 50px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -613,6 +621,7 @@ blockquote::before {
   background: linear-gradient(135deg, var(--accent), var(--main));
   color: var(--white);
   box-shadow: 0 16px 38px rgba(217, 120, 142, 0.34);
+  font-size: 0.94rem;
   font-weight: 700;
 }
 
@@ -636,6 +645,7 @@ blockquote::before {
 
   .hero {
     min-height: auto;
+    padding-top: 36px;
   }
 
   .hero-inner,
@@ -682,6 +692,12 @@ blockquote::before {
     padding-top: 28px;
   }
 
+  .hero-inner,
+  .container,
+  .header-inner {
+    width: min(100% - 40px, 1180px);
+  }
+
   .section {
     padding: 48px 0;
   }
@@ -723,6 +739,7 @@ blockquote::before {
 
   .button {
     width: 100%;
+    min-height: 50px;
     padding-inline: 1rem;
   }
 
